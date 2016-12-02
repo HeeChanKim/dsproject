@@ -8,8 +8,8 @@ typedef struct io_module_ {
 	FILE* schedule_file;
 } io_module;
 
-int open_movie_file(char* filename);
-int open_schedule_file(char* filename);
+int open_movie_file(io_module* io, char* filename);
+int open_schedule_file(io_module* io, char* filename);
 int close_movie_file();
 int close_schedule_file();
 

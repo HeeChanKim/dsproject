@@ -1,8 +1,8 @@
 #include "io.h"
 #include <stdlib.h>
 
-int open_movie_file(char* filename) { return 0; }
-int open_schedule_file(char* filename) { return 0; }
+int open_movie_file(io_module* io, char* filename) { return 0; }
+int open_schedule_file(io_module* io, char* filename) { return 0; }
 int close_movie_file() { return 0; }
 int close_schedule_file() { return 0; }
 
