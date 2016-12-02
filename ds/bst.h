@@ -27,7 +27,7 @@ bst_node* bst_search(bst_node* root, int target_rid)
 bst_node* bst_search(bst_node* root, int target_rid);
 
 /*
-int bst_insert(bst_node* root, bst_node* t);
+int bst_insert(bst_node** root, bst_node* t);
  > arguments
   root: 삽입을 실행할 트리의 루트
   t: 삽입할 노드
@@ -40,7 +40,7 @@ int bst_insert(bst_node* root, bst_node* t);
 @author
 
 */
-int bst_insert(bst_node* root, bst_node* t);
+int bst_insert(bst_node** root, bst_node* t);
 
 /*
 int bst_delete(bst_node* root, bst_node* t);
@@ -56,10 +56,10 @@ int bst_delete(bst_node* root, bst_node* t);
 @author
 
 */
-int bst_delete(bst_node* root, bst_node* t);
+int bst_delete(bst_node** root, bst_node* t);
 
 /*
-void bst_print(bst_node* root);
+void bst_print(bst_node** root);
  > arguments
   root: 출력할 트리의 루트
 
