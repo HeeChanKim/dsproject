@@ -10,7 +10,7 @@ typedef struct io_module_ {
 
 int open_movie_file(io_module* io, char* filename);
 int open_schedule_file(io_module* io, char* filename);
-int close_movie_file();
-int close_schedule_file();
+int close_movie_file(io_module* io);
+int close_schedule_file(io_module* io);
 
 movie* load_one_movie(FILE* mf);

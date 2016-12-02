@@ -4,13 +4,14 @@
 #include <stdlib.h>
 
 void bst_test();
+void submodule_test();
 
 submodule Submodule;
 
 int main()
 {
 	bst_test();
-
+	submodule_test();
 	return 0;
 }
 
@@ -28,4 +29,11 @@ void bst_test()
 	printf("[*] s->rid: %d\n", s->rid);
 
 	free(test);
+}
+
+void submodule_test()
+{
+	init_submodule(&Submodule);
+	print_movies(Submodule);
+	free_submodule(&Submodule);
 }

@@ -79,6 +79,9 @@
     <ClInclude Include="submodule.h" />
     <ClInclude Include="ui.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="movie.dat" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

@@ -3,14 +3,20 @@
 #include "bst.h"
 #include "io.h"
 
-const int MOVIE_MAX = 20;
-
 typedef struct submodule_
 {
 	io_module io;
-	schedule* Schedule;
+	schedule** Schedule;
+	movie** Movie_data;
 	bst_node* Reservation_data;
-	movie* Movie_data[MOVIE_MAX];
+
+	int num_movie;
+	int max_movie;
 } submodule;
 
 int init_submodule(submodule* S);
+int add_reservation(submodule* S, int rid, schedule* sch);
+int add_movie(submodule* S, char* movie_name, int running_time);
+int free_submodule(submodule* S);
+
+void print_movies(submodule S);

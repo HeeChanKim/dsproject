@@ -23,7 +23,7 @@ movie* movie_init(movie* mv, char* name);
 @author
 
 */
-movie* movie_init(movie* mv, char* name);
+movie* movie_init(movie** mv, char* name);
 
 typedef struct schedule_
 {
