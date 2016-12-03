@@ -1,7 +1,7 @@
 #pragma once
 
 const int SEATS_MAX = 250;
-
+const bool AVAILABLE = true;
 typedef struct movie_
 {
 	char* name;
@@ -30,21 +30,20 @@ typedef struct schedule_
 	movie* movie;
 	int starting_time;
 	int ending_time;
-	int room_number;
 	bool seats[SEATS_MAX];
 
+	schedule_* prev_movie;
 	schedule_* next_movie;
 } schedule;
 
 /*
-schedule* schedule_init(schedule* t, movie* mv, int rn);
+schedule* schedule_init(schedule* t, movie* mv, int st);
  해당 스케쥴의 상영 시작시간, 종료시간, 상영관 번호, 좌석 등을 초기화합니다.
 
  > arguments
   t: 초기화할 스케쥴 포인터
   mv: 상영할 영화
-  rn: 상영관 번호
-
+  st: 스케쥴 시작 시간
  > return value
   초기화에 성공했다면 t를 반환합니다
   실패했다면 NULL을 반환합니다
@@ -53,7 +52,7 @@ schedule* schedule_init(schedule* t, movie* mv, int rn);
 @author
 
 */
-schedule* schedule_init(schedule* t, movie* mv, int rn);
+schedule* schedule_init(schedule** t, movie* mv, int st);
 
 /*
 schedule* schedule_insert(schedule* head, schedule* t);
@@ -72,19 +71,3 @@ schedule* schedule_insert(schedule* head, schedule* t);
 
 */
 schedule* schedule_insert(schedule* head, schedule* t);
-
-/*
-int schedule_delete(schedule* head, schedule* t);
- > arguments
-  head: 스케쥴을 삭제할 리스트의 head
-  schedule: 삭제할 스케쥴
-
- > return value
-  삭제에 성공했다면 0 이외의 숫자를 반환합니다
-  실패했다면 0을 반환합니다
-
-
-@author
-
-*/
-int schedule_delete(schedule* head, schedule* t);

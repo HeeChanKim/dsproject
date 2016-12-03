@@ -10,8 +10,8 @@ submodule Submodule;
 
 int main()
 {
-	bst_test();
 	submodule_test();
+
 	return 0;
 }
 
@@ -35,5 +35,6 @@ void submodule_test()
 {
 	init_submodule(&Submodule);
 	print_movies(Submodule);
+	print_schedules(Submodule);
 	free_submodule(&Submodule);
 }
